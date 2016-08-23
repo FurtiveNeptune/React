@@ -8,7 +8,9 @@ var Greeter = React.createClass({
   onButtonClick: function (e) {
     e.preventDefault();
 
-    var name = this.refs.name.value();
+//Right here ^^
+
+    var name = this.refs.name.value;
 
     alert(name);
   },
@@ -21,9 +23,15 @@ var Greeter = React.createClass({
         <h1>Hello {name}!</h1>
         <p>{message + '!!'}</p>
 
+//Create a form just like any other language.
+//Basic HTML with "two quirks".
+//One, onSubmit attribute,which is built into react
+//Two, the preventDefault above at the comment block
+//above this one.
+
         <form onSubmit={this.onButtonClick}>
           <input type="text" ref="name"/>
-          <button>set name</button>
+          <button>Set Name</button>
         </form>
       </div>
     );
