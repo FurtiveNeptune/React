@@ -14,6 +14,7 @@ var Greeter = React.createClass({
     e.preventDefault();
 
     var name = this.refs.name.value;
+    this.refs.name.value = '';
 
     this.setState({
       name: name
