@@ -1,1 +1,1 @@
-React
+Simple test app for React. Thus the name.
