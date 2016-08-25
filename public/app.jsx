@@ -18,7 +18,7 @@ var GreeterForm = React.createClass({
 
       e.preventDefault();
 //^^^^^^ "preventDefault" keeps the browser from refreshing, that is handled internally
-    var updates {};
+    var updates = {};
     var name = this.refs.name.value;
 
     if (name.length > 0) {
