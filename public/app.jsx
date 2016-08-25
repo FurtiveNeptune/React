@@ -18,15 +18,15 @@ var GreeterForm = React.createClass({
 
       e.preventDefault();
 //^^^^^^ "preventDefault" keeps the browser from refreshing, that is handled internally
-
+    var updates {};
     var name = this.refs.name.value;
 
     if (name.length > 0) {
 //    ^^^  this makes sure input isn't blank
       this.refs.name.value = '';
-
+      updates.name = name;
 //    ^^^  if input is valid, this is where the input is collected
-      this.props.onNewName(name);
+      this.props.onNewName(updates);
     }
   },
   render: function () {
