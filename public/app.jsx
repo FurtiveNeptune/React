@@ -87,5 +87,3 @@ ReactDOM.render(
   <Greeter name={firstName}/>,
   document.getElementById('app')
 );
-
-//
